@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { PokeCard } from "./components/PokeCard";
 
-const baseUrl = "https://pokeapi.co/api/v2/";
 
 type Response = {
   count: number;
