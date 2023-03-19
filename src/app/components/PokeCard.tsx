@@ -3,7 +3,9 @@
 import Image from "next/image";
 
 export const PokeCard = ({ name, index }: { name: string; index: number }) => {
-  return (
+
+    };
+    return (
     <div className="pokecard">
       <p style={{ textAlign: "center" }}>{name}</p>
       <Image
