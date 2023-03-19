@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { PokeCard } from "./components/PokeCard";
 
-const baseUrl = "https://pokeapi.co/api/v2/";
 
 type Response = {
   count: number;
@@ -23,7 +23,9 @@ export default async function Home() {
       <h3>Total results: {data.count}</h3>
       <div className="pokegrid">
         {data.results?.map((entry, index) => (
-          <PokeCard key={index} name={entry.name} index={index} />
+          <Link key={index} href={`/${index+1}`}>
+            <PokeCard name={entry.name} index={index} />
+          </Link>
         ))}
       </div>
     </main>
