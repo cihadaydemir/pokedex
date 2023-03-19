@@ -1,6 +1,4 @@
-import { Inter } from "next/font/google";
 import { PokeCard } from "./components/PokeCard";
-const inter = Inter({ subsets: ["latin"] });
 
 const baseUrl = "https://pokeapi.co/api/v2/";
 
@@ -17,7 +15,7 @@ type PokemonEntry = {
 };
 
 export default async function Home() {
-  const res = await fetch(`${baseUrl}/pokemon`);
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon`);
   const data: Response = await res.json();
 
   return (
