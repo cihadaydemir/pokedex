@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
+import React from "react";
+
 import { Navbar } from "./components/Navbar";
 import "./globals.css";
+import { ProviderWrapper } from "./components/ProviderWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body>
         <Navbar />
-        {children}
+        <ProviderWrapper>{children}</ProviderWrapper>
       </body>
     </html>
   );
