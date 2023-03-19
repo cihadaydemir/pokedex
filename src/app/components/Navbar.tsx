@@ -1,7 +1,11 @@
+import Link from "next/link";
+
 export const Navbar = () => {
   return (
     <nav className="nav">
-      <h1>Pokédex</h1>
+      <Link href={"/"}>
+        <h1>Pokédex</h1>
+      </Link>
     </nav>
   );
 };
