@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
-import React from "react";
+import { Footer } from "./components/Footer";
 
 import { Navbar } from "./components/Navbar";
-import "./globals.css";
 import { ProviderWrapper } from "./components/ProviderWrapper";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Pokedex",
-  description: "Just a simple example project",
+  title: "Pokedéx",
+  description: "Search for your favourite Pokémons and collect them!",
 };
 
 export default function RootLayout({
@@ -25,6 +25,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <ProviderWrapper>{children}</ProviderWrapper>
+        <Footer />
       </body>
     </html>
   );
