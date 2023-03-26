@@ -1,35 +1,16 @@
-"use client";
-import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import { apiBaseUrl } from "../lib/constants";
 import { capitalizeFirstLetter } from "../lib/utils";
 import { Pokemon } from "../types";
 
-export default function Page({ params }: { params: { id: string } }) {
-  const { data } = useQuery(
-    ["pokemon", params.id],
-    async () => {
-      return (await (
-        await fetch(`${apiBaseUrl}/pokemon/${params.id}`)
-      ).json()) as Pokemon;
-    }
-    // {
-    //   select: (data) => {
-    //     const res = data;
-    //     const pkmn: Pokemon = {
-    //       name: res.name,
-    //       height: res.height,
-    //       stats: [data.stats.map((stat:Statistic) => {})],
-    //     };
-    //     return pkmn;
-    //   },
-    // }
-  );
+export default async function Page({ params }: { params: { id: string } }) {
+  const res = await fetch(`${apiBaseUrl}/pokemon/${params.id}`);
+  const data: Pokemon = await res.json();
 
   return (
     <div>
       {data && (
-        <>
+        <main>
           <h2>{capitalizeFirstLetter(data?.name)}</h2>
           <Image
             alt={data?.name}
@@ -51,7 +32,7 @@ export default function Page({ params }: { params: { id: string } }) {
               {capitalizeFirstLetter(stat.stat.name)}: {stat.base_stat}
             </div>
           ))}
-        </>
+        </main>
       )}
     </div>
   );

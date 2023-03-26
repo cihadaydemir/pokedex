@@ -1,3 +1,13 @@
+# Pokèdex by chd.
+
+This is a simple Pokédex appliactino and was developed to test out some of the Next.js concepts.
+
+## Todo
+
+[] DB connection with Prisma
+[] NextAuth for authentication
+[] Favourite list for CRUD operations with next api
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
