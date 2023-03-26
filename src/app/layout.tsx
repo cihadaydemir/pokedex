@@ -22,13 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body>
-        <Navbar />
-        <div style={{ flex: 1 }}>
-          <ProviderWrapper>{children}</ProviderWrapper>
-        </div>
-        <Footer />
-      </body>
+      <ProviderWrapper>
+        <body>
+          <Navbar />
+          <div style={{ flex: 1 }}>{children}</div>
+          <Footer />
+        </body>
+      </ProviderWrapper>
     </html>
   );
 }

@@ -10,7 +10,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <div>
       {data && (
-        <>
+        <main>
           <h2>{capitalizeFirstLetter(data?.name)}</h2>
           <Image
             alt={data?.name}
@@ -32,7 +32,7 @@ export default async function Page({ params }: { params: { id: string } }) {
               {capitalizeFirstLetter(stat.stat.name)}: {stat.base_stat}
             </div>
           ))}
-        </>
+        </main>
       )}
     </div>
   );
