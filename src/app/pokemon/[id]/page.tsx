@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { apiBaseUrl } from "../lib/constants";
-import { capitalizeFirstLetter } from "../lib/utils";
-import { Pokemon } from "../types";
+import { apiBaseUrl } from "../../lib/constants";
+import { capitalizeFirstLetter } from "../../lib/utils";
+import { Pokemon } from "../../types";
 
 export default async function Page({ params }: { params: { id: string } }) {
   const res = await fetch(`${apiBaseUrl}/pokemon/${params.id}`);
