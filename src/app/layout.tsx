@@ -24,7 +24,9 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body>
         <Navbar />
-        <ProviderWrapper>{children}</ProviderWrapper>
+        <div style={{ flex: 1 }}>
+          <ProviderWrapper>{children}</ProviderWrapper>
+        </div>
         <Footer />
       </body>
     </html>

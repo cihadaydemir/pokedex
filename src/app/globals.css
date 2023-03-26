@@ -1,6 +1,13 @@
 html {
   background-color: #111111;
-  color: white
+  color: white;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .pokegrid {
@@ -33,4 +40,10 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
